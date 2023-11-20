@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 def shorten_link(headers, url):
     long_link = { 
-        "long_url": "{url}" 
+        "long_url": url 
         }
     post_response = requests.post('https://api-ssl.bitly.com/v4/bitlinks', 
                                   headers=headers, json=long_link)
